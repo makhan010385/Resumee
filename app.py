@@ -3,6 +3,32 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 from PIL import Image
+
+# Inject custom CSS
+st.markdown("""
+    <style>
+        /* Set the background color for the main content area */
+        .stApp {
+            background-color: #002b36;
+            color: #ffffff;
+        }
+
+        /* Set the background color for the sidebar */
+        .css-1d391kg {
+            background-color: #586e75;
+        }
+
+        /* Set the primary color for interactive elements */
+        .css-1cpxqw2 {
+            color: #d33682;
+        }
+
+        /* Set the text color */
+        .css-1cpxqw2, .css-1d391kg, .stApp {
+            color: #ffffff;
+        }
+    </style>
+""", unsafe_allow_html=True)
 # --- PATH SETTINGS ---
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
